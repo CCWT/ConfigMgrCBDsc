@@ -221,6 +221,11 @@ Configuration xSccmSqlSetup
 
         [Parameter()]
         [ValidateNotNullorEmpty()]
+        [String]
+        $UpdateSource,
+
+        [Parameter()]
+        [ValidateNotNullorEmpty()]
         [Uint16]
         $SqlPort = 1433,
 
@@ -323,6 +328,7 @@ Configuration xSccmSqlSetup
             SQLTempdbLogFileGrowth  = $SQLTempdbLogFileGrowth
             SourcePath              = $SqlInstallPath
             UpdateEnabled           = $UpdateEnabled
+            UpdateSource            = $UpdateSource
         }
     }
     else
@@ -348,6 +354,7 @@ Configuration xSccmSqlSetup
             SQLTempDBLogDir         = $finalSQLTempDBLogDir
             SourcePath              = $SqlInstallPath
             UpdateEnabled           = $UpdateEnabled
+            UpdateSource            = $UpdateSource
         }
     }
 
