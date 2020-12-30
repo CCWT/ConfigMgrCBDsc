@@ -86,6 +86,9 @@
     .PARAMETER UpdateEnabled
         Specify whether SQL Server setup should discover and include product updates.
 
+    .PARAMETER UpdateSource
+        Specify the Path to the source of updates to be applied during installation.
+
     .PARAMETER SqlPort
         Specifies the port SQL listens on.
 
